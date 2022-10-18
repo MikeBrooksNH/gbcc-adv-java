@@ -19,8 +19,8 @@ Declare (but do not define) the method getCorrectAnswer() that has an empty para
 
 
     //integer constants x and y
-    int x = 0;
-    int y = 0;
+    //int x = 0;
+    //int y = 0;
 
     public String getQuestion();
     public int getCorrectAnswer();
