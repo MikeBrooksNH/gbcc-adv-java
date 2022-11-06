@@ -1,7 +1,10 @@
+//Replace this class code with your solution to the Chapter 12 zyLab
+
 public abstract class MathQuestion implements MathQuestionable {
     // TODO: Declare private member integer constants x and y
-    private final int  x;
-    private final int  y;
+    private final int x;
+    private final int y;
+
     // TODO: Define a default (no parameters) constructor that assigns
     // x to RANDOM.nextInt(MAX_LARGE) + 1
     // y to RANDOM.nextInt(MAX_SMALL) + 1
@@ -17,6 +20,7 @@ public abstract class MathQuestion implements MathQuestionable {
         this.x = x;
         this.y = y;
     }
+
 
     // TODO: Define public accessor methods getX() and getY()
     public int getX() {
@@ -35,8 +39,7 @@ public abstract class MathQuestion implements MathQuestionable {
 }
 
 class AdditionQuestion extends MathQuestion {
-    // This class definition should give you a basic idea for how to define the other
-    // operation classes. Keep in mind the other characteristics each operation might have.
+    // A video walk-through will be provided for how to write the code for this class
     public AdditionQuestion() {
         super();
     }
@@ -56,8 +59,8 @@ class AdditionQuestion extends MathQuestion {
 }
 
 class DivisionQuestion extends MathQuestion {
-    private static int _x = RANDOM.nextInt(MAX_LARGE) + 1;
-    private static int _y = RANDOM.nextInt(_x) + 1;
+    private static  int _x = RANDOM.nextInt(MAX_LARGE) + 1;
+    private static  int _y = RANDOM.nextInt(_x) + 1;
 
     // TODO: Define default constructor to call parent class constructor and passing _x and _y as arguments
     // You will also need to reassign new random values to both _x and _y as shown in the initial assignment statements
@@ -67,6 +70,7 @@ class DivisionQuestion extends MathQuestion {
         this._y = RANDOM.nextInt(_x) + 1;
     }
 
+
     // TODO: Define a parameterized constructor that accepts two integers and passes these in a call to the parent constructor
     public DivisionQuestion(int x, int y) {
         super(x, y);
@@ -74,6 +78,7 @@ class DivisionQuestion extends MathQuestion {
 
     // TODO: Define getQuestion that returns a String and makes a call to the parent getQuestion method.
     // You will need to pass OperationType.DIVIDE as the argument
+
     public String getQuestion() {
         return super.getQuestion(OperationType.DIVIDE);
     }
@@ -86,8 +91,8 @@ class DivisionQuestion extends MathQuestion {
 }
 
 class ExponentQuestion extends MathQuestion {
-    private static int _x = RANDOM.nextInt(MAX_BASE) + 1;
-    private static int _y = RANDOM.nextInt(MAX_EXPONENT);
+    private static  int _x = RANDOM.nextInt(MAX_BASE) + 1;
+    private static  int _y = RANDOM.nextInt(MAX_EXPONENT);
 
     // TODO: Define default constructor to call parent class constructor and passing _x and _y as arguments
     // You will also need to reassign new random values to both _x and _y as shown in the initial assignment statements
@@ -116,8 +121,8 @@ class ExponentQuestion extends MathQuestion {
 }
 
 class ModuloQuestion extends MathQuestion {
-    private static int _x = RANDOM.nextInt(MAX_LARGE) + 1;
-    private static int _y = RANDOM.nextInt(_x) + 1;
+    private static  int _x = RANDOM.nextInt(MAX_LARGE) + 1;
+    private static  int _y = RANDOM.nextInt(_x) + 1;
 
     // TODO: Define default constructor to call parent class constructor and passing _x and _y as arguments
     // You will also need to reassign new random values to both _x and _y as shown in the initial assignment statements
@@ -143,11 +148,12 @@ class ModuloQuestion extends MathQuestion {
         return (int) super.getX() % super.getY();
     }
 
+
 }
 
 class MultiplicationQuestion extends MathQuestion {
-    private static int _x = RANDOM.nextInt(MAX_MULTIPLE) + 1;
-    private static int _y = RANDOM.nextInt(MAX_MULTIPLE) + 1;
+    private static  int _x = RANDOM.nextInt(MAX_MULTIPLE) + 1;
+    private static  int _y = RANDOM.nextInt(MAX_MULTIPLE) + 1;
 
     // TODO: Define default constructor to call parent class constructor and passing _x and _y as arguments
     // You will also need to reassign new random values to both _x and _y as shown in the initial assignment statements
@@ -156,6 +162,7 @@ class MultiplicationQuestion extends MathQuestion {
         this._x = RANDOM.nextInt(MAX_MULTIPLE) + 1;
         this._y = RANDOM.nextInt(MAX_MULTIPLE) + 1;
     }
+
 
     // TODO: Define a parameterized constructor that accepts two integers and passes these in a call to the parent constructor
     public MultiplicationQuestion(int x, int y) {
@@ -176,8 +183,8 @@ class MultiplicationQuestion extends MathQuestion {
 }
 
 class SubtractionQuestion extends MathQuestion {
-    private static int _x = RANDOM.nextInt(MAX_SMALL) + MAX_SMALL + 1;
-    private static int _y = RANDOM.nextInt(MAX_SMALL) + 1;
+    private static  int _x = RANDOM.nextInt(MAX_SMALL) + MAX_SMALL + 1;
+    private static  int _y = RANDOM.nextInt(MAX_SMALL) + 1;
 
     // TODO: Define default constructor to call parent class constructor and passing _x and _y as arguments
     // You will also need to reassign new random values to both _x and _y as shown in the initial assignment statements
@@ -186,6 +193,7 @@ class SubtractionQuestion extends MathQuestion {
         this._x = RANDOM.nextInt(MAX_SMALL) + 1;
         this._y = RANDOM.nextInt(MAX_SMALL) + 1;
     }
+
 
     // TODO: Define a parameterized constructor that accepts two integers and passes these in a call to the parent constructor
     public SubtractionQuestion(int x, int y) {
