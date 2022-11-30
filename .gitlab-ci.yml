@@ -1,0 +1,16 @@
+build-job:
+  stage: build
+  script:
+    - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-armhf
+    - export PATH=$JAVA_HOME/bin:$PATH
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+
+test-job1:
+  stage: test
+  script:
+    - echo "This job tests something"
+    - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-armhf
+    - export PATH=$JAVA_HOME/bin:$PATH
+    - cd courseProject/src
+    - javac DataVisualizer.java
+
