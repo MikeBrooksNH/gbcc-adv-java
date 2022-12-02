@@ -1,0 +1,67 @@
+   public static void allPermutations(ArrayList<String> permList, ArrayList<String> nameList) {
+      String tmp = "";
+      System.out.println();
+      System.out.println(nameList);
+      for (int i = 0; i < permList.size()-1; i++) {
+         //System.out.println(nameList);
+         ArrayList<String> pList = new ArrayList<>();
+         ArrayList<String> tList = new ArrayList<>();
+         pList = permList;
+         tList = nameList;
+         pList.remove(i);
+         tList.remove(i);
+
+         int j = i;
+         String t = "";
+         while (j != nameList.size()) {
+            System.out.println("\t" + nameList.subList(j, nameList.size()));
+            System.out.println("");
+            //t =  tList.get(i);
+            //tList.set(i, tList.get(i+1));
+            //tList.set(i+1, t);
+            //allPermutations(pList,tList);
+            j++;
+         }
+
+         allPermutations(pList, tList);
+
+
+         /*
+         if (i == permList.size()-2) { // last one
+            for (int j = 0; j < permList.size() - 1; j++) {
+               //System.out.println(nameList.get(i));          */
+
+
+/*         tmp = nameList.get(i);
+         nameList.set(i, nameList.get(i + 1));
+         nameList.set(i + 1, tmp);
+         //System.out.println(nameList);
+         nameList.permList(i);
+         nameList.remove(i);
+         allPermutations(permList, nameList); */
+   /*            // System.out.printf("%d\tcurrent: %s\tlast: %s\n", i, nameList.get(i), nameList.get(nameList.size() - 1));
+            }
+         }// else {
+           // allPermutations(nameList, nameList);
+         //}
+         System.out.println();
+         */
+
+      }
+   //      tmp =  nameList.get(i);
+   //      nameList.set(i, nameList.get(i+1));
+   //      nameList.set(i+1, tmp);
+         //allPermutations(permList,nameList);
+         //if (nameList.get(i).compareTo(permList.get(i)) == 0) {
+            //nameList.remove(i);
+            //allPermutations(nameList, nameList);
+            //int j = i;
+            //while (j != nameList.size()) {
+            //   System.out.println("\t" + nameList.subList(j, nameList.size()));
+            //   j++;
+            //}
+         //}
+         //System.out.println();
+     // }
+
+   }
